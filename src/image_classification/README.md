@@ -1,15 +1,15 @@
 # Image Classification Experiments
 
 ## About the Code
-This codebase is written in Pytorch. It is clearly documented with bash file execution points exposing all required arguments and hyper-parameters. We also provide Docker container details to run our code. 
+This codebase is written in PyTorch. It is clearly documented with bash file execution points exposing all required arguments and hyper-parameters. We also provide Docker container details to run our code.
 
-:white_check_mark: Pytorch
+:white_check_mark: PyTorch
 
 :white_check_mark: ​NVIDIA DALI
 
 :white_check_mark: ​Multi-GPU / Mixed-Precision training
 
-:white_check_mark: ​DockerFile
+:white_check_mark: ​Dockerfile
 
 
 ## Hyper-parameters
@@ -19,7 +19,7 @@ For all reported ImageNet-1K LS and KD experiments,
 - batch size = 256
 - adam optimizer (β1=0.9, β2​=0.999).
 - initial learning rate = 0.1 decayed by a factor of 10 every 30 epochs
-- epochs = 90 for LS experiments following standard ImageNet receipe and 
+- epochs = 90 for LS experiments following standard ImageNet recipe and
 - epochs = 200 for KD experiments following [[1]](#1)
 - Data augmentation for training : Random Resized Crop (224), Random Horizontal Flip
 - Data augmentation for testing : Center Crop (224) after resizing the smallest side to 256
@@ -32,7 +32,7 @@ For all reported ImageNet-1K LS and KD experiments,
 - batch size = 256
 - adam optimizer (β1=0.9, β2​=0.999).
 - initial learning rate = 0.1 decayed by a factor of 10 every 30 epochs
-- epochs = 90 for LS experiments following standard ImageNet receipe and 
+- epochs = 90 for LS experiments following standard ImageNet recipe and
 - epochs = 200 for KD experiments following [[1]](#1)
 - Data augmentation for training : Random Resized Crop (224), Random Horizontal Flip, Random Rotation, Random Grayscale, Random Color Jitter
 - Data augmentation for testing : Center Crop (224) after resizing the smallest side to 256
@@ -45,7 +45,7 @@ For all reported ImageNet-1K LS and KD experiments,
 
    ` pip install -r requirements.txt`
 
-2. Download ImageNet-1K dataset from [here](https://www.image-net.org/download.php). For CUB experiments dataset will be downloaded automatically.
+2. Download the ImageNet-1K dataset from [here](https://www.image-net.org/download.php). For CUB experiments, the dataset will be downloaded automatically.
 
 3. To train teacher models,
    - For ImageNet-1K, run `bash bash_scripts/imagenet/train_teacher.sh`

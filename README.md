@@ -15,21 +15,21 @@ Singapore University of Technology and Design (SUTD)<br/>
 
 ## Abstract
 
-This work investigates the compatibility between label smoothing (LS) and knowledge distillation (KD). Contemporary findings addressing this thesis statement take dichotomous standpoints: Muller et al. (2019); Shen et al. (2021). Critically, there is no effort to understand and resolve these contradictory findings, leaving the primal question — to smooth or not to smooth a teacher network? — unanswered. The main contributions of our work are the discovery, analysis and validation of systematic diffusion as the missing concept which is instrumental in understanding and resolving these contradictory findings. This systematic diffusion essentially curtails the benefits of distilling from an LS-trained teacher, thereby rendering KD at increased temperatures ineffective. Our discovery is comprehensively supported by large-scale experiments, analyses and case studies including image classification, neural machine translation and compact student distillation tasks spanning across multiple datasets and teacher-student architectures. Based on our analysis, <em>we suggest practitioners to use an LS-trained teacher with a low-temperature transfer to achieve high performance students.</em>
+This work investigates the compatibility between label smoothing (LS) and knowledge distillation (KD). Contemporary findings addressing this thesis statement take dichotomous standpoints: Muller et al. (2019); Shen et al. (2021). Critically, there is no effort to understand and resolve these contradictory findings, leaving the primal question — to smooth or not to smooth a teacher network? — unanswered. The main contributions of our work are the discovery, analysis and validation of systematic diffusion as the missing concept which is instrumental in understanding and resolving these contradictory findings. This systematic diffusion essentially curtails the benefits of distilling from an LS-trained teacher, thereby rendering KD at increased temperatures ineffective. Our discovery is comprehensively supported by large-scale experiments, analyses and case studies including image classification, neural machine translation and compact student distillation tasks spanning across multiple datasets and teacher-student architectures. Based on our analysis, <em>we suggest that practitioners use an LS-trained teacher with a low-temperature transfer to achieve high-performing students.</em>
 
-> **A rule of thumb for practitioners.** We suggest to use an LS-trained teacher with a low-temperature transfer (i.e. *T* = 1) to render high performance students.
+> **A rule of thumb for practitioners.** We suggest using an LS-trained teacher with a low-temperature transfer (i.e. *T* = 1) to render high-performing students.
 
 
 ## About the code
-This codebase is written in Pytorch. It is clearly documented with bash file execution points exposing all required arguments and hyper-parameters. We also provide Docker container details to run our code. 
+This codebase is written in PyTorch. It is clearly documented with bash file execution points exposing all required arguments and hyper-parameters. We also provide Docker container details to run our code.
 
-:white_check_mark: Pytorch
+:white_check_mark: PyTorch
 
 :white_check_mark: ​NVIDIA DALI
 
 :white_check_mark: ​Multi-GPU / Mixed-Precision training
 
-:white_check_mark: ​DockerFile
+:white_check_mark: ​Dockerfile
 
 
 
@@ -67,11 +67,11 @@ This codebase is written in Pytorch. It is clearly documented with bash file exe
 | Student : ResNet-50       | T = 3         | 75.488 / 92.670 | 75.790 / 93.006 |
 | Student : ResNet-50       | T = 64        | 74.278 / 92.410 | 74.566 / 92.596 |
 
-Results produced with 20.12-py3 ([Nvidia Pytorch Docker container](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_20-12.html#rel_20-12)) + Pytorch LTS 1.8.2 + CUDA11.1
+Results produced with 20.12-py3 ([NVIDIA PyTorch Docker container](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_20-12.html#rel_20-12)) + PyTorch LTS 1.8.2 + CUDA11.1
 
 ## Pretrained Models
 
-All pretrained image classification, fine-graind image clasification, neural machine translation and compact student distillation models are available [here](https://drive.google.com/drive/folders/1GwqXRVYBpKGolNh2OLEzWUdOHx2XQ6G2?usp=sharing)
+All pretrained image classification, fine-grained image classification, neural machine translation and compact student distillation models are available [here](https://drive.google.com/drive/folders/1GwqXRVYBpKGolNh2OLEzWUdOHx2XQ6G2?usp=sharing)
 
 
 
@@ -99,7 +99,7 @@ All pretrained image classification, fine-graind image clasification, neural mac
 
 We gratefully acknowledge the following works and libraries:
 
-- Pytorch official ImageNet Training : https://github.com/pytorch/examples/tree/main/imagenet
+- PyTorch official ImageNet Training : https://github.com/pytorch/examples/tree/main/imagenet
 - DALI ImageNet Training : https://github.com/NVIDIA/DALI/blob/ce25d722bc47b8b4f3633ef008a85535db305789/docs/examples/use_cases/pytorch/resnet50/main.py
 - Multilingual NMT with Knowledge Distillation on Fairseq (ICLR'19) : https://github.com/RayeRen/multilingual-kd-pytorch
 - FairSeq Library : https://github.com/facebookresearch/fairseq
